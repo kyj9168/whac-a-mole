@@ -1,0 +1,7 @@
+{
+    "MYSQL_HOST": "kyj9168.ddns.net",
+    "USER": "test",
+    "PASSWORD": "test123!",
+    "DATABASE": "insurance_db",
+    "EXPRESS_PORT": 6104
+}

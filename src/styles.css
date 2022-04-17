@@ -1,0 +1,132 @@
+body {
+  background: linear-gradient(#d1e9fa 0 30%, #86c270 30%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button {
+  width: 120px;
+  height: 30px;
+  border: none;
+  background-color: #f0b62d;
+  border-radius: 10px;
+  margin: 10px 0;
+  font-size: large;
+}
+.numberSelect > span {
+  text-align: right;
+  width: 80px;
+  margin-right: 20px;
+  display: inline-block;
+  font-size: large;
+}
+.numberSelect > select {
+  text-align: center;
+  width: 80px;
+  margin-right: 20px;
+  display: inline-block;
+  background-color: #d1e9fa;
+  font-size: large;
+}
+.end-game {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+
+.mole {
+  display: block;
+  background: url(/images/mole.png);
+  -webkit-user-drag: none;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  border: none;
+  position: relative;
+  cursor: url(/images/cursor_click.cur), auto !important;
+}
+
+.mole.in {
+  top: 100px;
+  transition: top 0.2s;
+}
+
+.mole.out {
+  top: 10px;
+  transition: top 0.5s;
+}
+.mole_list {
+  display: grid;
+  cursor: url(/images/cursor_click.cur), auto !important;
+}
+.dirt_img {
+  -webkit-user-drag: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+}
+.mole-hole {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.moles {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 20vmin);
+  grid-template-rows: repeat(2, 20vmin);
+  align-items: center;
+}
+
+.moles > *:nth-of-type(4),
+.moles > *:nth-of-type(5) {
+  transform: translate(50%, 0);
+}
+
+.info {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+}
+
+.info-text {
+  font-size: 2rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.rank_area {
+  margin: 15px 0;
+}
+
+.rank_div {
+  margin: 5px 0;
+}
+
+.rank_div > th {
+  font-size: large;
+  text-align: center;
+  padding: 0 15px 0 0;
+}
+.rank_div > td {
+  font-size: large;
+  text-align: center;
+  padding: 0 15px 0 0;
+}
