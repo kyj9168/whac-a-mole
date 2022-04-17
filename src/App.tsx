@@ -17,7 +17,7 @@ const App = () => {
 
 	return (
 		<>
-			<img className='grass' src="/images/grass2.png" alt="grass" />
+			<img className='grass' src="/images/grass.png" alt="grass" />
 			{!playing && !finished && <Main />}
 			{playing && <Game />}
 			{finished && <Rank />}
