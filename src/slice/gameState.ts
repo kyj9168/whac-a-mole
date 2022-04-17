@@ -1,13 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface GameState {
-	moles: number[];
-	row: number;
-	column: number;
-	moleValue: number;
 	playing: boolean;
 	finished: boolean;
-	reset: number;
+	stop: boolean;
 }
 
 export const gameState = createSlice({
@@ -15,6 +11,7 @@ export const gameState = createSlice({
 	initialState: {
 		playing: false,
 		finished: false,
+		stop: false,
 	} as GameState,
 	reducers: {
 		setPlaying(state, action: PayloadAction<boolean>) {
@@ -25,8 +22,13 @@ export const gameState = createSlice({
 			state.finished = action.payload;
 			return state;
 		},
+
+		setStop(state) {
+			state.stop = !state.stop;
+			return state;
+		},
 	},
 });
 
-export const { setPlaying, setFinished } = gameState.actions;
+export const { setPlaying, setFinished, setStop } = gameState.actions;
 export default gameState.reducer;

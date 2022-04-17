@@ -1,8 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { plusScore } from '../../slice/score';
-import { RootState } from '../../store/reducer';
 import { audio } from 'src/utils/util';
 
 const MoleBtn = styled.input``;

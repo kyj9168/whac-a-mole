@@ -7,7 +7,6 @@ import { setPlaying, setFinished } from 'src/slice/gameState';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from 'src/store/reducer';
 import { setScore } from 'src/slice/score';
-import { generateMoles } from 'src/utils/util';
 import { setTime } from 'src/slice/time';
 
 const Main = (props: any) => {

@@ -1,9 +1,9 @@
-import React, { FormEvent, useState, useRef, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Mole from '../molecules/Mole';
 import { GameInfo, setMoles, setReset } from '../../slice/gameInfo';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../store/reducer';
-import { generateMoles, randomNumber } from 'src/utils/util';
+import { randomNumber } from 'src/utils/util';
 
 const MoleList = (props: any) => {
 	const dispatch = useDispatch();
@@ -17,14 +17,15 @@ const MoleList = (props: any) => {
 
 	useEffect(() => {
 		dispatch(setMoles());
-		console.log(row, column, moles, moleValue, reset);
 	}, [reset]);
 
 	setTimeout(() => {
-		if (reset == 500) {
-			dispatch(setReset(550));
-		} else {
-			dispatch(setReset(reset - 50));
+		if (!props.stop) {
+			if (reset == 700) {
+				dispatch(setReset(750));
+			} else {
+				dispatch(setReset(reset - 50));
+			}
 		}
 	}, reset);
 	const random = randomNumber(moles, moleValue);

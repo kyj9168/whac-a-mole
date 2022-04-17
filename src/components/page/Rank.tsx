@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Score from 'src/components/organisms/Score';
-import { GameInfo, setColumn, setRow, setMoles, setReset } from '../../slice/gameInfo';
+import ClickBtn from 'src/components/atoms/ClickBtn';
+import { GameInfo, setMoles, setReset } from '../../slice/gameInfo';
 import { setPlaying, setFinished } from 'src/slice/gameState';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../store/reducer';
@@ -45,7 +46,7 @@ const Rank = (props: any) => {
 					</tr>
 				))}
 			</table>
-			<button onClick={startGame}>다시 시작</button>
+			<ClickBtn click={startGame}>다시 시작</ClickBtn>
 		</>
 	);
 };

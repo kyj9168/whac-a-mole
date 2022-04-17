@@ -16,6 +16,7 @@ export const gameInfo = createSlice({
 		column: 2,
 		moleValue: 1,
 		reset: 2000,
+		stop: false,
 	} as GameInfo,
 	reducers: {
 		setRow(state, action: PayloadAction<number>) {
@@ -35,7 +36,6 @@ export const gameInfo = createSlice({
 			function loop() {
 				const moles = generateMoles(state.row, state.column);
 				if (state.moles != moles) {
-					console.log(1238432790847893247, moles);
 					state.moles = moles;
 					return state;
 				} else {
@@ -47,8 +47,8 @@ export const gameInfo = createSlice({
 		setReset(state, action: PayloadAction<number>) {
 			state.reset = action.payload;
 			return state;
-		},
+		}
 	},
 });
-export const { setRow, setColumn, setMoleValue, setMoles, setReset } = gameInfo.actions;
+export const { setRow, setColumn,setMoleValue, setMoles, setReset } = gameInfo.actions;
 export default gameInfo.reducer;

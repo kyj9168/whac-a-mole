@@ -1,6 +1,5 @@
 import React from 'react';
-import { GameInfo, setColumn, setRow, setMoleValue } from '../../slice/gameInfo';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 const NumberSelect = (props: any) => {
 	const dispatch = useDispatch();
