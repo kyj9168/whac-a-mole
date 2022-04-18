@@ -12,9 +12,25 @@ const randomNumber = (moles: number[], moleValue: number) => {
 };
 
 const audio = () => {
-	const audios = ['doh', 'ow', 'ya'];
+	const doh = new Audio(`/audio/doh.mp3`);
+	const ow = new Audio(`/audio/ow.mp3`);
+	const ya = new Audio(`/audio/ya.mp3`);
 
-	new Audio(`/audio/${audios[Math.floor(Math.random() * 3)]}.mp3`).play();
+	switch (Math.floor(Math.random() * 3)) {
+		case 0:
+			doh.play();
+			break;
+		case 1:
+			ow.play();
+			break;
+		case 2:
+			ya.play();
+			break;
+
+		default:
+			doh.play();
+			break;
+	}
 };
 
 export { generateMoles, audio, randomNumber };
