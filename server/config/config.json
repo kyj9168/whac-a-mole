@@ -3,5 +3,5 @@
     "USER": "test",
     "PASSWORD": "test123!",
     "DATABASE": "insurance_db",
-    "EXPRESS_PORT": 3001
+    "EXPRESS_PORT": 6104
 }

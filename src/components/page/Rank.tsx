@@ -8,7 +8,7 @@ import { RootState } from '../../store/reducer';
 import { setScore } from '../../slice/score';
 
 import { setTime } from 'src/slice/time';
-import { setRank, User } from 'src/slice/rank';
+import { setRank, User, addRank } from 'src/slice/rank';
 const Rank = (props: any) => {
 	const dispatch = useDispatch();
 	const gameInfo = useSelector<RootState, GameInfo>((state) => state.gameInfo);
@@ -26,7 +26,8 @@ const Rank = (props: any) => {
 
 	useEffect(() => {
 		const nickname = window.prompt('닉네임을 입력하세요.') || 'none';
-		dispatch(setRank({ nickname, score }));
+		dispatch(addRank({ nickname, score }));
+		// dispatch(setRank({ nickname, score }));
 	}, []);
 
 	return (
