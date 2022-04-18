@@ -6,7 +6,6 @@ import { pool } from '../database';
 import { Rank } from '../interfaces/rank';
 
 indexRouter.post('/addList', async (req, res, next) => {
-	console.log(342342, req.body);
 	const { nickname, score } = req.body;
 	const conn = await pool.getConnection();
 	try {
@@ -18,7 +17,6 @@ indexRouter.post('/addList', async (req, res, next) => {
 
 		if (insertResult.affectedRows === 1) {
 			const [result] = (await conn.query('SELECT  * FROM ranking ORDER BY score DESC LIMIT 10;')) as any;
-			console.log(result);
 			res.json({ result });
 		}
 	} catch (err) {
