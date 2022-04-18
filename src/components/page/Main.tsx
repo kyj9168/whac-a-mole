@@ -36,8 +36,8 @@ const Main = (props: any) => {
 	return (
 		<>
 			<h1>두더지게임</h1>
-			<NumberSelect name={'가로 수'} min={2} max={6} numValue={row} setValue={setRow} />
-			<NumberSelect name={'세로 수'} min={2} max={6} numValue={column} setValue={setColumn} />
+			<NumberSelect name={'세로 수'} min={2} max={6} numValue={row} setValue={setRow} />
+			<NumberSelect name={'가로 수'} min={2} max={6} numValue={column} setValue={setColumn} />
 			<NumberSelect name={'두더지 수'} min={1} max={moleMax} numValue={moleValue} setValue={setMoleValue} />
 
 			<ClickBtn click={startGame}>게임 시작</ClickBtn>

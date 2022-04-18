@@ -44,7 +44,6 @@ button {
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
-  background-size: 60%;
   border: none;
   position: relative;
   cursor: url(/images/cursor_click.cur), auto !important;
