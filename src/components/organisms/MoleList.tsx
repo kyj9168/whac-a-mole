@@ -29,12 +29,25 @@ const MoleList = (props: any) => {
 		}
 	}, reset);
 	const random = randomNumber(moles, moleValue);
+
+	let rowPx = 100;
+	let columnPx = 100;
+	if (row == 4 || column == 4) {
+		rowPx = 80;
+		columnPx = 80;
+	} else if (row == 5 || column == 5) {
+		rowPx = 70;
+		columnPx = 70;
+	} else if (row == 6 || column == 6) {
+		rowPx = 60;
+		columnPx = 60;
+	}
 	return (
 		<div
 			className="mole_list"
 			style={{
-				gridTemplateRows: `repeat(${row}, 100px)`,
-				gridTemplateColumns: `repeat(${column}, 100px)`,
+				gridTemplateRows: `repeat(${row}, ${330 / row}px)`,
+				gridTemplateColumns: `repeat(${column}, ${330 / column}px)`,
 			}}
 		>
 			{moles.map((obj, id) => {

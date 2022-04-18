@@ -50,7 +50,7 @@ button {
 }
 
 .mole.in {
-  top: 100px;
+  top: 100%;
   transition: top 0.2s;
 }
 
@@ -67,7 +67,7 @@ button {
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  bottom: -5px;
+  bottom: 0px;
   width: 100%;
 }
 .mole-hole {
